@@ -1,2 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 .header {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  background-image: url("https://github.com/Anastessha/mq18_diploma_ab/blob/master/images/football_767.jpg?raw=true");
+  background-color: #222449;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header::after {
+  content: "";
+  background-color: #222449;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: auto;
+}
+
+.logo_text {
+  fill: #ffffff;
+  width: 134px;
+  height: 36px;
+  margin-top: 33px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header_title {
+  display: flex;
+  flex-wrap: wrap;
+  color: #ffffff;
+  font-size: 28px;
+  font-family: Open sans bold;
+  text-transform: uppercase;
+  margin-top: 137px;
+  margin-bottom: 88px;
+}
+
+.header_title_second {
+  margin-left: 44px;
+  margin-top: 30px;
+}
+
+.buttons {
+  font-size: 8px;
+  margin-bottom: 84px;
+ }
+
+.dload_button {
+  display: flex;
+  box-sizing: border-box;
+  height: 35px;
+  background-color: #5e3db3;
+  border-radius: 17px;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+}
+
+.dload_button:nth-child(n+2) {
+  margin-top: 14px;
+}
+
+.logo_button {
+  fill: #ffffff;
+  width: 19px;
+  height: 18px;
+  display: block;
+}
+
+.button_name {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  list-style-type: none;
+  padding-left: 1em;
+  margin: 0;
+  font-family: Open sans bold;
+  display: block;
+}
+
+.button_name_label {
+  margin-top: 0.5em;
+}
+
+.menu_01, .menu_02, .menu_03 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.person_title {
+  font-size: 50px;
+  font-family: Open sans bold;
+  text-transform: uppercase;
+  color: #e7e7e7;
+  padding-top: 25px;
+  padding-bottom: 245px;
+  margin-left: 20px;
+  position: relative;
+}
+
+.person_img {
+  position: absolute;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -227px;
+}
+
+.menu_01 {
+  background-color: #fafafa;
+}
+
+.menu_02 {
+  background-color: #f5f4f9;
+}
+
+.menu_03 {
+  background-color: #5e3db3;
+}
+
+.menu_03 .menu_number::after {
+  content: "";
+  width: 15px;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 1px;
+  display: block;
+  margin-top: 3px;
+}
+
+.players .menu_03 {
+  background-color: #090a36;
+}
+
+.persons .menu_03 .description {
+  color: #ffffff;
+}
+
+.players .menu_03 .menu_number {
+  color: #8761e0;
+}
+
+.menu_title {
+  display: flex;
+}
+
+.menu_number {
+  font-size: 14px;
+  font-family: Open sans bold;
+  margin-top: 60px;
+}
+
+.menu_number::after {
+  content: "";
+  width: 15px;
+  height: 4px;
+  background-color: #5e3db3;
+  border-radius: 1px;
+  display: block;
+  margin-top: 3px;
+}
+
+.menu_name {
+  font-size: 23px;
+  color: #c1c1c1;
+  text-transform: uppercase;
+  margin-top: 60px;
+  margin-left: 9px;
+}
+
+.description {
+  padding-top: 30px;
+  padding-bottom: 55px;
+  font-size: 15px;
+  font-family: Open sans regular;
+}
+
+.action_img {
+  position: relative;
+  max-width: 100%;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.actions .menu_number {
+  color: #f5f6f7;
+  display: block;
+  box-sizing: border-box;
+  background-color: #5e3db3;
+  padding-left: 26px;
+  padding-top: 26px;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  margin-top: -58px;
+  margin-left: 20px;
+}
+
+.actions .menu_number::after {
+  content: "";
+  width: 15px;
+  height: 4px;
+  background-color: #8f78ca;
+  border-radius: 1px;
+  display: block;
+  margin-top: 5px;
+}
+
+.action_title {
+  color: #e7e7e7;
+  font-size: 28px;
+  font-family: Open sans bold;
+  text-transform: uppercase;
+  padding-top: 34px;
+  padding-left: 20px;
+}
+
+.actions .description {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 81px;
+  padding-top: 28px;
+}
+
+.footer {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  background-image: url("https://github.com/Anastessha/mq18_diploma_ab/blob/master/images/game_767.jpg?raw=true");
+  background-color: #222449;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer::after {
+  content: "";
+  background-color: #222449;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+}
+
+.footer_title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 75px;
+}
+
+.footer_title_first {
+  font-size: 32px;
+  font-family: Open sans bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 13px;
+}
+
+.footer_title_second {
+  font-size: 14px;
+  font-family: Open sans regular;
+  text-transform: uppercase;
+  color: #9b8dc3;
+}
+
+.logo {
+  width: 58px;
+  height: 47px;
+  fill: #ffffff;
+  display: block;
+  border-radius: 12px;
+  background-color: #5e3db3;
+  padding: 13px 6px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 89px;
+  margin-bottom: 58px;
+}
+
+.footer .logo_text {
+  margin-bottom: 9px;
+  margin-top: 80px;
+}
+
+@font-face {
+  font-family: Open sans bold;
+  src: url("../fonts/OpenSans-Bold.woff");
+  font-weight: 700;
+  font-style: normal;  
+}
+
+@font-face {
+  font-family: Open sans regular;
+  src: url("../fonts/OpenSans-Regular.woff");
+  font-weight: 400;
+  font-style: normal;  
 }
