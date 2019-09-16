@@ -8,6 +8,10 @@ html {
   -moz-appearance: none;
 }
 
+.body {
+  font-family: Open sans regular;
+}
+
 .header {
   min-height: 100vh;
   display: flex;
@@ -30,35 +34,43 @@ html {
 }
 
 .container {
-  position: relative;
-  z-index: 2;
   padding-left: 20px;
   padding-right: 20px;
+  position: relative;
+  z-index: 2;
   margin: auto;
+}
+
+.header .container {
+  padding-top: 33px;
 }
 
 .logo_text {
   fill: #ffffff;
   width: 134px;
   height: 36px;
-  margin-top: 33px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.header_title {
+.header_title, .footer_title {
+  visibility: hidden;
+  position: absolute;
+}
+
+.header_slogan {
   display: flex;
   flex-wrap: wrap;
   color: #ffffff;
   font-size: 28px;
-  font-family: Open sans bold;
+  font-weight: bold;
   text-transform: uppercase;
   margin-top: 137px;
   margin-bottom: 88px;
 }
 
-.header_title_second {
+.header_slogan_second {
   margin-left: 44px;
   margin-top: 30px;
 }
@@ -97,7 +109,7 @@ html {
   list-style-type: none;
   padding-left: 1em;
   margin: 0;
-  font-family: Open sans bold;
+  font-weight: bold;
   display: block;
 }
 
@@ -105,44 +117,58 @@ html {
   margin-top: 0.5em;
 }
 
-.menu_01, .menu_02, .menu_03 {
+.section_content {
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 83px;
+  padding-bottom: 55px;
+}
+
+.section_content:nth-child(n+3) {
+  padding-top: 60px;
 }
 
 .person_title {
   font-size: 50px;
-  font-family: Open sans bold;
+  font-weight: bold;
   text-transform: uppercase;
   color: #e7e7e7;
+  padding-left: 20px;
   padding-top: 25px;
-  padding-bottom: 245px;
-  margin-left: 20px;
-  position: relative;
 }
 
 .person_img {
-  position: absolute;
   max-width: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -227px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -55px;
 }
 
-.menu_01 {
+.color-grey {
   background-color: #fafafa;
 }
 
-.menu_02 {
+.color-dark-grey {
   background-color: #f5f4f9;
 }
 
-.menu_03 {
+.color-violet {
   background-color: #5e3db3;
 }
 
-.menu_03 .menu_number::after {
+.color-blue {
+  background-color: #090a36;
+}
+
+.color-blue, .color-violet  .description {
+  color: #ffffff;
+}
+
+.color-blue .section_number {
+  color: #8761e0;
+}
+
+.color-violet .section_number::after {
   content: "";
   width: 15px;
   height: 4px;
@@ -152,29 +178,26 @@ html {
   margin-top: 3px;
 }
 
-.players .menu_03 {
-  background-color: #090a36;
+.color-blue .section_number::after {
+  content: "";
+  width: 15px;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 1px;
+  display: block;
+  margin-top: 3px;
 }
 
-.persons .menu_03 .description {
-  color: #ffffff;
-}
-
-.players .menu_03 .menu_number {
-  color: #8761e0;
-}
-
-.menu_title {
+.section_title {
   display: flex;
 }
 
-.menu_number {
+.section_number {
   font-size: 14px;
-  font-family: Open sans bold;
-  margin-top: 60px;
+  font-weight: bold;
 }
 
-.menu_number::after {
+.section_number::after {
   content: "";
   width: 15px;
   height: 4px;
@@ -184,31 +207,33 @@ html {
   margin-top: 3px;
 }
 
-.menu_name {
+.section_name {
   font-size: 23px;
   color: #c1c1c1;
   text-transform: uppercase;
-  font-family: Open sans bold;
-  margin-top: 60px;
+  font-weight: bold;
   margin-left: 9px;
 }
 
 .description {
   padding-top: 30px;
-  padding-bottom: 55px;
   font-size: 15px;
-  font-family: Open sans regular;
 }
 
-.action_img {
+.action-item {
   position: relative;
+}
+.action_img {
   max-width: 100%;
   display: block;
-  margin-left: 0;
-  margin-right: 0;
 }
 
-.actions .menu_number {
+.action_content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.actions .section_number {
   color: #f5f6f7;
   display: block;
   box-sizing: border-box;
@@ -219,10 +244,9 @@ html {
   height: 70px;
   position: absolute;
   margin-top: -58px;
-  margin-left: 20px;
 }
 
-.actions .menu_number::after {
+.actions .section_number::after {
   content: "";
   width: 15px;
   height: 4px;
@@ -235,15 +259,12 @@ html {
 .action_title {
   color: #e7e7e7;
   font-size: 28px;
-  font-family: Open sans bold;
+  font-weight: bold;
   text-transform: uppercase;
   padding-top: 34px;
-  padding-left: 20px;
 }
 
 .actions .description {
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 81px;
   padding-top: 28px;
 }
@@ -269,24 +290,27 @@ html {
   left: 0;
 }
 
-.footer_title {
+.footer .container {
+  padding-bottom: 9px;
+}
+
+.footer_slogan {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 75px;
 }
 
-.footer_title_first {
+.footer_slogan_first {
   font-size: 32px;
-  font-family: Open sans bold;
+  font-weight: bold;
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 13px;
 }
 
-.footer_title_second {
+.footer_slogan_second {
   font-size: 14px;
-  font-family: Open sans regular;
   text-transform: uppercase;
   color: #9b8dc3;
 }
@@ -306,8 +330,160 @@ html {
 }
 
 .footer .logo_text {
-  margin-bottom: 9px;
   margin-top: 80px;
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  .header {
+    background-image: url("https://github.com/Anastessha/mq18_diploma_ab/blob/master/images/football_1280.jpg?raw=true");
+  }
+  .header .container {
+    padding-top: 37px;
+  }
+  .header_slogan {
+    font-size: 64px;
+    font-weight: bold;
+    margin-left: 90px;
+    margin-top: 180px;
+  }
+  .logo_text {
+    width: 205px;
+    height: 57px;
+  }
+  .header_slogan_second {
+    margin-left: 107px;
+    margin-top: 32px;
+  }
+  .logo_button {
+    width: 42px;
+    height: 45px;
+  }
+  .buttons {
+    font-size: 14px;
+    margin-top: 312px;
+    display: flex;
+    justify-content: center;
+  }
+  .dload_button {
+    height: 77px;
+    min-width: 250px;
+    border-radius: 35px;
+  }
+  .dload_button:nth-child(n+2) {
+    margin-left: 30px;
+    margin-top: 0;
+  }
+  .button_name {
+    padding-left: 1.7em;
+  }
+ .athlets, .players {
+    position: relative;
+  }
+  .section_number {
+    font-size: 18px;
+  }
+  .section_number::after {
+    content: "";
+    width: 22px;
+    height: 5px;
+    margin-top: 7px;
+  }
+  .actions .section_number::after {
+    content: "";
+    width: 25px;
+    height: 5px;
+    margin-top: 9px;
+  }
+  .section_name {
+    font-size: 32px;
+  }
+  .person_title {
+    font-size: 80px;
+    padding-top: 85px;
+    padding-bottom: 0;
+    padding-left: 43%;
+    padding-right: 32px;
+  }
+  .players .person_title {
+    padding-left: 32px;
+  }
+  .athlets .person_img {
+    margin-left: -160px;
+    position: absolute;
+    top: 100px;
+  }
+  .players .person_img {
+    position: absolute;
+    right: 0;
+    top: 65px;
+  }
+  .athlets .section_content {
+    padding-left: 43%;
+    padding-right: 32px;
+  }
+  .color-grey {
+    background-color: #ffffff; 
+  }
+  .section_content {
+    padding-right: 43%;
+    padding-left: 32px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+  .color-dark-grey, .color-blue, color-violet {
+    padding-top: -20px;
+  }
+  .description {
+    padding-top: 32px;
+    font-size: 16px;
+  }
+  .action_content {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .actions .section_number {
+    padding-left: 45px;
+    padding-top: 42px;
+    width: 116px;
+    height: 116px;
+    margin-top: -80px;
+    margin-left: 30px;
+    font-size: 24px;
+  }
+  .action_title {
+    font-size: 80px;
+    padding-top: 55px;
+  }
+  .actions .description {
+    font-size: 24px;
+  }
+  .footer {
+    background-image: url("https://github.com/Anastessha/mq18_diploma_ab/blob/master/images/game_1280.jpg?raw=true");
+  }
+  .footer .container {
+    padding-bottom: 20px;
+  }
+  .footer_slogan {
+    margin-bottom: 287px;
+  }
+  .footer_slogan_first {
+    font-size: 80px;
+    margin-bottom: 28px;
+  }
+  .footer_slogan_second {
+    font-size: 36px;
+  }
+  .logo {
+    width: 102px;
+    height: 85px;
+    border-radius: 25px;
+    padding: 26px 12px;
+    margin-top: 126px;
+    margin-bottom: 83px;
+  }
+  .footer .logo_text {
+    margin-top: 55px;
+  }
 }
 
 @font-face {
