@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Open sans';
+  src: url("../fonts/OpenSans-Bold.woff");
+  font-weight: 700;
+  font-style: normal;  
+}
+
+@font-face {
+  font-family: 'Open sans';
+  src: url("../fonts/OpenSans-Regular.woff");
+  font-weight: 400;
+  font-style: normal;  
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,27 +22,26 @@ html {
   -moz-appearance: none;
 }
 
-body {
-  font-family: Open sans regular;
+.body {
+  font-family: 'Open sans';
 }
 
 .header {
   min-height: 100vh;
   display: flex;
   position: relative;
-  background-image: url("https://github.com/Anastessha/mq18_diploma_ab/blob/master/images/football_767.jpg?raw=true");
-  background-color: #222449;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #0a0e34;
 }
 
 .header::after {
   content: "";
-  background-color: #222449;
+  background-image: url("https://github.com/Anastessha/mq18_diploma_ab/blob/master/images/football_767.jpg?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   position: absolute;
-  opacity: 0.8;
+  opacity: 0.1;
   top: 0;
   left: 0;
 }
@@ -86,9 +99,11 @@ body {
   height: 35px;
   background-color: #5e3db3;
   border-radius: 17px;
-  justify-content: center;
   text-decoration: none;
   align-items: center;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .dload_button:nth-child(n+2) {
@@ -100,6 +115,7 @@ body {
   width: 19px;
   height: 18px;
   display: block;
+  padding-left: 82px;
 }
 
 .button_name {
@@ -223,12 +239,13 @@ body {
 .action-item {
   position: relative;
 }
+
 .action_img {
   max-width: 100%;
   display: block;
 }
 
-.action_content {
+.action_info {
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -244,6 +261,7 @@ body {
   height: 70px;
   position: absolute;
   margin-top: -58px;
+  left: 20px;
 }
 
 .actions .section_number::after {
@@ -272,20 +290,19 @@ body {
 .footer {
   position: relative;
   min-height: 100vh;
-  display: flex;
-  background-image: url("https://github.com/Anastessha/mq18_diploma_ab/blob/master/images/game_767.jpg?raw=true");
-  background-color: #222449;
-  background-size: cover;
-  background-repeat: no-repeat;
+  display: flex; 
+  background-color: #0a0e34;
 }
 
 .footer::after {
   content: "";
-  background-color: #222449;
+  background-image: url("https://github.com/Anastessha/mq18_diploma_ab/blob/master/images/game_767.jpg?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   position: absolute;
-  opacity: 0.8;
+  opacity: 0.1;
   top: 0;
   left: 0;
 }
@@ -297,6 +314,7 @@ body {
 .footer_slogan {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   margin-bottom: 75px;
 }
@@ -333,16 +351,56 @@ body {
   margin-top: 80px;
 }
 
+@media (min-width: 641px) {
+  .buttons {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .logo_button {
+    width: 42px;
+    height: 49px;
+  }
+  .dload_button {
+    width: 310px;
+    height: 76px;
+    border-radius: 35px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .athlets, .players {
+    position: relative;
+  }
+  .color-grey {
+    background-color: #ffffff; 
+  }
+  .person_title {
+    font-size: 80px;
+  }
+  .section_number {
+    font-size: 18px;
+  }
+  .action_title {
+    font-size: 80px;
+  }
+  .actions .description {
+    font-size: 24px;
+  }
+  .actions .section_number {
+    font-size: 24px;
+  }
+}
+
 @media (min-width: 641px) and (max-width: 960px) {
-  .header {
+  .header::after {
     background-image: url("https://github.com/Anastessha/mq18_diploma_ab/blob/master/images/football_1280.jpg?raw=true");
+    background-position: center;
   }
   .header .container {
     padding-top: 37px;
   }
   .header_slogan {
     font-size: 64px;
-    font-weight: bold;
     margin-left: 90px;
     margin-top: 180px;
   }
@@ -354,20 +412,8 @@ body {
     margin-left: 107px;
     margin-top: 32px;
   }
-  .logo_button {
-    width: 42px;
-    height: 45px;
-  }
   .buttons {
-    font-size: 14px;
     margin-top: 312px;
-    display: flex;
-    justify-content: center;
-  }
-  .dload_button {
-    height: 77px;
-    min-width: 250px;
-    border-radius: 35px;
   }
   .dload_button:nth-child(n+2) {
     margin-left: 30px;
@@ -375,18 +421,6 @@ body {
   }
   .button_name {
     padding-left: 1.7em;
-  }
- .athlets, .players {
-    position: relative;
-  }
-  .section_number {
-    font-size: 18px;
-  }
-  .section_number::after {
-    content: "";
-    width: 22px;
-    height: 5px;
-    margin-top: 7px;
   }
   .actions .section_number::after {
     content: "";
@@ -398,7 +432,6 @@ body {
     font-size: 32px;
   }
   .person_title {
-    font-size: 80px;
     padding-top: 85px;
     padding-bottom: 0;
     padding-left: 43%;
@@ -408,21 +441,18 @@ body {
     padding-left: 32px;
   }
   .athlets .person_img {
-    margin-left: -160px;
     position: absolute;
     top: 100px;
+    left: -160px;
   }
   .players .person_img {
     position: absolute;
-    right: 0;
     top: 65px;
+    right: 0;
   }
   .athlets .section_content {
     padding-left: 43%;
     padding-right: 32px;
-  }
-  .color-grey {
-    background-color: #ffffff; 
   }
   .section_content {
     padding-right: 43%;
@@ -437,26 +467,22 @@ body {
     padding-top: 32px;
     font-size: 16px;
   }
-  .action_content {
+  .action_info {
     padding-left: 32px;
     padding-right: 32px;
-  }
+}
   .actions .section_number {
     padding-left: 45px;
     padding-top: 42px;
     width: 116px;
     height: 116px;
     margin-top: -80px;
-    font-size: 24px;
+    left: 32px;
   }
   .action_title {
-    font-size: 80px;
     padding-top: 55px;
   }
-  .actions .description {
-    font-size: 24px;
-  }
-  .footer {
+  .footer::after {
     background-image: url("https://github.com/Anastessha/mq18_diploma_ab/blob/master/images/game_1280.jpg?raw=true");
   }
   .footer .container {
@@ -485,16 +511,154 @@ body {
   }
 }
 
-@font-face {
-  font-family: Open sans bold;
-  src: url("../fonts/OpenSans-Bold.woff");
-  font-weight: 700;
-  font-style: normal;  
-}
-
-@font-face {
-  font-family: Open sans regular;
-  src: url("../fonts/OpenSans-Regular.woff");
-  font-weight: 400;
-  font-style: normal;  
+@media (min-width: 961px) and (max-width: 1920px) {
+  .header::after {
+    background-image: url("https://github.com/Anastessha/mq18_diploma_ab/blob/master/images/football_1920.jpg?raw=true");
+    background-position: center;
+  }
+  .container {
+    padding-left: 192px;
+    padding-right: 192px;
+  }
+  .header .container {
+    padding-top: 45px;
+  }
+  .logo_text {
+    width: 191px;
+    height: 52px;
+  }
+  .header_slogan {
+    font-size: 90px;
+    margin-top: 296px;
+    margin-bottom: 223px;
+  }
+  .header_slogan_second {
+    text-align: right;
+    margin-left: auto;
+    margin-top: 27px;
+  }
+  .buttons {
+    font-size: 14px;
+    margin-bottom: 109px;
+    display: flex;
+    justify-content: center;
+  }
+  .logo_button {
+    width: 42px;
+    height: 49px;
+    padding-left: 0;
+  }
+  .dload_button {
+    width: 310px;
+    height: 76px;
+    border-radius: 35px;
+    justify-content: center;
+  }
+  .dload_button:nth-child(n+2) {
+    margin-left: 50px;
+    margin-top: 0;
+  }
+  .button_name {
+    padding-left: 1.5em;
+  }
+  .button_name_label {
+    margin-top: 5px;
+  }
+  .person_title {
+    padding-top: 116px;
+    padding-bottom: 0;
+    padding-right: 192px;
+  }
+  .athlets .person_img {
+    position: absolute;
+    top: 100px;
+    left: -160px;
+  }
+  .players .person_img {
+    position: absolute;
+    top: 65px;
+    right: 0;
+  }
+  .section_name {
+    font-size: 36px;
+  }
+  .section_number::after {
+    content: "";
+    width: 20px;
+    height: 5px;
+    margin-top: 7px;
+  }
+  .description {
+    font-size: 20px;
+  }
+  .action-item {
+    display: flex;
+  }
+  .action_img {
+    width: 50vw;
+  }
+  .action-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .action_info {
+    display: flex;
+    padding-left: 0;
+    width: 50vw;
+    padding-top: 210px;
+  }
+  .action_info:nth-child(2n+) {
+    flex-direction: row-reverse;
+  }
+  .actions .section_number {
+    display: block;
+    padding-left: 70px;
+    padding-top: 62px;
+    width: 167px;
+    height: 155px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 210px;
+  }
+  .actions .section_number::after {
+    content: "";
+    width: 27px;
+    height: 5px;
+    margin-top: 9px;
+  }
+  .action_content {
+    padding-left: 129px;
+    padding-right: 192px;
+  }
+  .action_content:nth-child(even) {
+    padding-right: 129px;
+    padding-left: 192px;
+  }
+  .action_title {
+    padding-top: 0;
+  }
+  .footer::after {
+    background-image: url("https://github.com/Anastessha/mq18_diploma_ab/blob/master/images/game_1920.jpg?raw=true");
+    background-position: center;
+  }
+  .title_container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 152px;
+    margin-top: 230px;
+  }
+  .logo {
+    margin: 0;
+  }
+  .footer_slogan {
+    margin-left: 37px;
+    margin-bottom: 0;
+  }
+  .footer .container {
+    padding-bottom: 51px;
+  }
+  .footer .buttons {
+    margin-bottom: 262px;
+  }
 }
