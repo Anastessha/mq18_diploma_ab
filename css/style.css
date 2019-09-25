@@ -360,6 +360,7 @@ html {
   .logo_button {
     width: 42px;
     height: 49px;
+    padding-left: 0;
   }
   .dload_button {
     width: 310px;
@@ -367,6 +368,7 @@ html {
     border-radius: 35px;
     margin-left: 0;
     margin-right: 0;
+    justify-content: center;
   }
   .athlets, .players {
     position: relative;
@@ -540,19 +542,10 @@ html {
   .buttons {
     font-size: 14px;
     margin-bottom: 109px;
-    display: flex;
-    justify-content: center;
   }
   .logo_button {
     width: 42px;
     height: 49px;
-    padding-left: 0;
-  }
-  .dload_button {
-    width: 310px;
-    height: 76px;
-    border-radius: 35px;
-    justify-content: center;
   }
   .dload_button:nth-child(n+2) {
     margin-left: 50px;
